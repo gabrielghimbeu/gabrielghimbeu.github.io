@@ -1,0 +1,132 @@
+body{
+
+    background-color: rgb(235,82,143);
+    margin: 0;
+
+}
+
+.saeTitle{
+
+    font-family: 'Bronx';
+    text-align: center;
+
+}
+
+.saeComp{
+
+    font-family: 'Bronx';
+    font-size: 30px;
+    padding: 20px;
+
+}
+
+.saeDesc{
+
+    font-family: 'Bronx';
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 20px;
+
+}
+
+.saeAC>h3{
+
+    font-family: 'Bronx';
+    background-color: darkorange;
+    border-style: solid;
+    border-radius: 0px 10px 10px 0px;
+    padding: 20px;
+    column-gap: 20px;
+    width: 60%;
+    border-color: black;
+    margin-left: -5px;
+    transition: 0.5s;
+    text-align: center; 
+
+}
+
+.saeAC>h3:hover{
+
+    padding: 40px;
+    color: white;
+    cursor: pointer;
+    border-color: black;
+
+}
+
+.saeRessources{
+
+    font-family: 'Bronx';
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 0;
+    margin-right: 10px;
+    padding: 20px;
+
+}
+
+.saeRessources>div{
+
+    background-color: rgb(97,217,240);
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.5s;
+
+}
+
+.saeRessources>div:hover{
+
+    border-radius: 0px;
+    cursor: pointer;
+
+}
+
+.saeSemester{
+
+    font-family: 'Bronx';
+    margin-top: 20px;
+    font-size: 25px;
+    padding: 20px;
+
+}
+
+.backButton{
+
+    font-family: 'Bronx';
+    background-color: rebeccapurple;
+    border-color: black;
+    border-style: solid;
+    border-radius: 0px 10px 10px 0px;
+    padding: 20px;
+    width: 10%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -5px;
+    transition: 0.5s;
+
+}
+
+.backButton:hover{
+
+    color: white;
+    width: 20%;
+    cursor: pointer;
+
+    text-shadow:
+    0 0 21px #fff,
+    0 0 102px #fff,
+    0 0 151px #fff;   
+
+}
+
+@font-face{
+
+    font-family: 'Bronx';
+    src: url('../fonts/Bronx.otf');
+    
+}

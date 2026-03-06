@@ -1,0 +1,41 @@
+h1
+{
+    color:orange;
+}
+
+h2
+{
+    color:lightseagreen;
+}
+
+body    
+{
+    background-color: red;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    src: url("https://www.dafont.com/tf2-build.font");
+}
+
+#bacc
+{
+    width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+}
+
+ul li
+{
+    list-style-type: none;
+}
+
+a
+{
+    text-decoration: none;
+    color:lightseagreen;
+}
+
+a:hover
+{
+    color :black;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Ghimbeu | Portfolio</title>
+    <link rel="stylesheet" href="styles/style1.css"> 
+</head>
+<body>
+
+    <header>Mon portfolio</header>
+    
+    <div class="page1">
+        
+        <div class="profile">
+
+            <img src="images/circle.png" alt="circle" width="400" height="400px" onclick="showDesc()">
+            <div class="profileDesc">Bienvenue sur mon site web portfolio. 
+                <br>Je me prénomme Gabriel Ghimbeu et je suis en 1ère année de BUT Métiers du Multimédia et de l'Internet. Je suis passionné par l'animation 3D et la programmation.
+                <br>Mon rêve ultime serait d'être animateur 3d chez Pixar.
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="page2">
+
+        <h1>Choissisez votre SAE</h1>
+        <div class="page2content" id="scroll">
+
+            <button onclick="leftClick()">❰</button>
+            <div class="textStuff" id="scrollSwag">
+
+                <h3 class="saeName">SAE</h3>
+                <div class="saeDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vitae in libero optio id dolor sunt inventore soluta dicta qui accusamus, rerum numquam labore adipisci eaque! Vel reprehenderit id repellat.</div>
+                
+                <div class="statContainer">
+                    
+                    <div class="stat1">
+
+                        <img src="svg/sword.svg" alt="atk" width="20px" height="20px">
+                        <div class="stat1bar"></div>
+    
+                    </div>
+                    <div class="stat2">
+    
+                        <img src="svg/heart.svg" alt="hp" width="20px" height="20px">
+                        <div class="stat2bar"></div>
+    
+                    </div>
+                    <div class="stat3">
+    
+                        <img src="svg/thunder.svg" alt="spd" width="20px" height="20px">
+                        <div class="stat3bar"></div>
+    
+                    </div>
+
+                </div>
+
+            </div>
+            <img src="images/sae101.png" alt="Character Image" class="charImage">
+            <button onclick="rightClick()">❱</button>
+
+        </div>
+        
+        <div class="selectButton" onclick="selectButton()">Sélectionner</div>
+
+    </div>
+
+    <img src="svg/sound0.svg" alt="volume icon" width="20px" height="20px" id="sound" onclick="soundManager()">
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/script1.js"></script>
+    <script src="scripts/script2.js"></script>
+    
+    <audio src="audio/bg.ogg" loop></audio>
+
+
+</body>
+</html>

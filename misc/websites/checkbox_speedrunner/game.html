@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1{
+
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Visitor;
+            font-size: 2rem;
+
+        }
+
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #checkbox{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        #countdown{
+
+            position: absolute;
+            right: 0;
+            padding: 20px;
+            font-family: Visitor;
+            font-size: 3rem;
+            height: 100px;
+
+        }
+
+        #score{
+
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 90%;
+            left: 50%;
+            font-family: Visitor;
+            font-size: 1.6rem;
+
+        }
+
+        #gameOverScreen{
+
+            display: none;
+
+        }
+
+        @font-face {
+            font-family: Visitor;
+            src: url(visitor.ttf);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Checkbox Speedrunner</h1>
+
+    <div id="countdown"></div>
+    <div id="score"></div>
+    <div id="container">
+        <input type="checkbox" id="checkbox">
+    </div>
+
+    <div id="gameOverScreen">
+
+        <h1>Game Over!</h1>
+        <h2>jvhdffj</h2>
+
+    </div>
+
+
+
+    <script>
+        
+        const checkbox = document.getElementById('checkbox');
+        let score = 0;
+        let gameStarted = false;
+
+        checkbox.addEventListener('click', () => {
+            const maxX = window.innerWidth - checkbox.offsetWidth;
+            const maxY = window.innerHeight - checkbox.offsetHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            checkbox.style.left = `${randomX}px`;
+            checkbox.style.top = `${randomY}px`;
+
+            if(gameStarted == false){
+
+                startGame();
+            }
+
+
+            score++;
+            document.getElementById("score").textContent = `Score : ${score}`;
+
+            setTimeout(function(){document.getElementById("checkbox").checked = false;},200);
+
+            
+
+        
+        });
+
+        function startGame(){
+
+            document.querySelector('h1').style = 'display:none';
+            startCountdown();
+            gameStarted = true;
+
+        }
+
+
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            let seconds = 60;
+
+            function updateCountdown() {
+                countdownElement.textContent = seconds;
+
+                if (seconds === 0) {
+                    endGame();
+
+                } else {
+                    seconds--;
+                    setTimeout(updateCountdown, 1000); // Met à jour toutes les 1 seconde (1000 millisecondes)
+                }
+            }
+
+            updateCountdown();
+        }
+
+        function endGame(){
+
+            document.querySelector("#gameOverScreen").style = 'display:block';
+            document.querySelector("#gameOverScreen>h2").innerHTML = `Score final : ${score}`;
+            document.querySelector("#checkbox").style = 'display:none';
+            document.querySelector('#countdown').style = 'display:none';
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>
